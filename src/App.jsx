@@ -98,7 +98,7 @@ const App = () => {
 
           {/* 02. Deadline */}
           <RuleCard number="02" icon={Clock} title="Thời Gian Chốt Vote">
-            Hãy thể hiện sự chuyên nghiệp của chúng ta! Mọi người nhớ sắp xếp công việc và vote sớm trong vòng <span className="inline-block bg-blue-600 text-white px-2 py-0.5 rounded font-bold mx-1 shadow-sm my-1 md:my-0 leading-normal">48 giờ</span> (2 ngày) để Host kịp giữ sân đẹp hen.
+            Hãy thể hiện sự chuyên nghiệp của chúng ta! Mọi người nhớ sắp xếp công việc và vote sớm trong vòng <span className="inline-block bg-blue-600 text-white px-2 py-0.5 rounded font-bold mx-1 shadow-sm my-1 md:my-0 leading-normal">48 giờ</span> (2 ngày) tính từ thời điểm mở vote để Host kịp giữ sân đẹp nhen.
           </RuleCard>
 
           {/* 03. Vé Vớt */}
@@ -111,7 +111,7 @@ const App = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <div className="w-2.5 h-2.5 bg-purple-500 rounded-full shrink-0"></div>
-                <span>Hết quỹ: <b className="text-purple-600">Host sẽ thu theo tình hình</b></span>
+                <span>Còn sân nhưng hết quỹ: <b className="text-purple-600">Host sẽ thu dựa theo tình hình</b></span>
               </div>
               <div className="flex items-center gap-2.5">
                 <div className="w-2.5 h-2.5 bg-rose-500 rounded-full shrink-0"></div>
