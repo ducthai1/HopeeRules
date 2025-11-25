@@ -163,7 +163,7 @@ const App = () => {
         {/* Footer Info */}
         <div className="text-center pb-6 md:pb-8">
           <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-blue-300 uppercase tracking-widest">
-            <ShieldCheck size={14} className="shrink-0" /> Hopee Badminton Club 2025
+            <ShieldCheck size={14} className="shrink-0" /> Hopee Badminton Club 2025 <ShieldCheck size={14} className="shrink-0" />
           </div>
         </div>
 
