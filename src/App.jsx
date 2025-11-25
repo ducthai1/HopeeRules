@@ -132,7 +132,7 @@ const App = () => {
                 <div className="text-xl font-black text-rose-600">50k</div>
               </div>
             </div>
-            <p className="mt-3 text-center text-xs text-rose-400 italic leading-relaxed">"Chúng ta hãy đến một group chuyên nghiệp, không bùng kèo he!"</p>
+            <p className="mt-3 text-center text-xs text-rose-400 italic leading-relaxed">"Chúng ta hãy hướng đến một group chuyên nghiệp, không bùng kèo he!"</p>
           </RuleCard>
 
           {/* 05. Khách Mời */}
