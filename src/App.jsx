@@ -4,9 +4,9 @@ import { Ticket, Clock, UserPlus, AlertTriangle, Users, Info, Heart, ShieldCheck
 // eslint-disable-next-line no-unused-vars
 const RuleCard = ({ number, icon: Icon, title, children, isLast }) => {
   return (
-    <div className="flex gap-4 md:gap-6 relative">
+    <div className="flex gap-0 md:gap-6 relative w-full">
       {/* Cột Timeline bên trái */}
-      <div className="flex flex-col items-center flex-shrink-0 w-12 md:w-16">
+      <div className="hidden md:flex flex-col items-center flex-shrink-0 w-12 md:w-16">
         {/* Số thứ tự nổi bật */}
         <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg md:text-xl shadow-lg border-3 md:border-4 border-blue-50 z-10 shrink-0">
           {number}
@@ -19,17 +19,25 @@ const RuleCard = ({ number, icon: Icon, title, children, isLast }) => {
       </div>
 
       {/* Nội dung Card bên phải */}
-      <div className="flex-grow pb-10 md:pb-12">
+      <div className="flex-grow w-full pb-8 md:pb-12">
         <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-sm md:shadow-md border border-slate-100 hover:shadow-lg md:hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group cursor-grab active:cursor-grabbing">
           {/* Dải màu trang trí bên trái card */}
           <div className="absolute top-0 left-0 w-1 md:w-1.5 h-full bg-gradient-to-b from-blue-400 to-blue-600"></div>
 
-          <div className="flex items-start gap-3 md:gap-4">
-            <div className="p-2.5 md:p-3 bg-blue-50 text-blue-600 rounded-lg md:rounded-xl group-hover:scale-110 transition-transform duration-300">
+          {/* Badge số thứ tự cho mobile */}
+          <div className="flex items-center gap-3 mb-4 md:hidden pl-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-black shadow-md text-base tracking-widest">
+              {number}
+            </div>
+            <div className="h-0.5 flex-1 bg-blue-200 rounded-full"></div>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-4 flex-wrap text-center md:text-left">
+            <div className="p-2.5 md:p-3 bg-blue-50 text-blue-600 rounded-lg md:rounded-xl group-hover:scale-110 transition-transform duration-300 mx-auto md:mx-0">
               <Icon className="w-6 h-6 md:w-7 md:h-7" strokeWidth={2} />
             </div>
             <div className="flex-grow">
-              <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2 md:mb-3 flex items-center uppercase tracking-tight">
+              <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2 md:mb-3 flex items-center justify-center md:justify-start uppercase tracking-tight">
                 {title}
               </h3>
               {/* Tăng line-height lên leading-loose để thoáng hơn */}
@@ -41,7 +49,7 @@ const RuleCard = ({ number, icon: Icon, title, children, isLast }) => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center flex-shrink-0 w-12 md:w-16">
+      <div className="hidden md:flex flex-col items-center flex-shrink-0 w-12 md:w-16">
         {/* Khoảng trống để căn chỉnh với card bên phải */}
       </div>
     </div>
@@ -71,7 +79,7 @@ const App = () => {
           {/* 01. Vote & Đặt sân */}
           <RuleCard number="01" icon={Ticket} title="Vote & Đặt Sân">
             <p className="mb-4 text-slate-700">Số sân được đặt dựa trên lượng vote thực tế:</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4 text-center leading-normal">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-4 text-center leading-normal">
               <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
                 <div className="text-xs text-slate-400 font-bold uppercase mb-1">0-3 Vote</div>
                 <div className="text-lg font-black text-slate-500">0 Sân</div>
@@ -137,12 +145,12 @@ const App = () => {
 
           {/* 05. Khách Mời */}
           <RuleCard number="05" icon={Users} title="Khách Mời (Vãng Lai)" isLast={true}>
-            <div className="flex items-center justify-between bg-gradient-to-r from-teal-50 to-emerald-50 p-4 rounded-xl border border-teal-100 mb-2 leading-normal">
-              <div className="text-center flex-1 border-r border-teal-200">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between bg-gradient-to-r from-teal-50 to-emerald-50 p-4 rounded-xl border border-teal-100 mb-2 leading-normal gap-3 sm:gap-0">
+              <div className="text-center flex-1 sm:border-r border-teal-200 pr-0 sm:pr-3">
                 <span className="block text-xs font-bold text-teal-500 uppercase mb-1">Nữ</span>
                 <span className="block text-xl font-black text-teal-700">20-40k</span>
               </div>
-              <div className="text-center flex-1">
+              <div className="text-center flex-1 pl-0 sm:pl-3">
                 <span className="block text-xs font-bold text-teal-500 uppercase mb-1">Nam</span>
                 <span className="block text-xl font-black text-teal-700">40-60k</span>
               </div>
