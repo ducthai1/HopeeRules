@@ -112,7 +112,7 @@ const App = () => {
           {/* 03. Vé Vớt */}
           <RuleCard number="03" icon={UserPlus} title="Đăng Ký Bổ Sung (Vé Vớt)">
             <p className="mb-3">Nếu muốn tham gia nhưng lại hơi sát giờ chơi? Nhắn ngay lên group chung tag <b>@all</b> hoặc nhắn riêng với <b>Host</b> để hỏi nè.</p>
-            <div className="space-y-2.5 text-sm bg-slate-50 p-3 rounded-lg border border-slate-200 leading-relaxed">
+            <div className="space-y-2.5 text-sm bg-slate-50 p-3 rounded-lg border border-slate-200 leading-relaxed text-left">
               <div className="flex items-center gap-2.5">
                 <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full shrink-0"></div>
                 <span>Còn sân: <b className="text-emerald-600">Luôn welcome mọi người tham gia ạ!</b></span>
